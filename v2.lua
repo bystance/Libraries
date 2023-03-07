@@ -217,7 +217,7 @@ do
 	function library.new(title)
 		local container = utility:Create("ScreenGui", {
 			Name = title,
-			Parent = game.CoreGui
+			Parent = gethui and gethui() or game:GetService("CoreGui") -- game.CoreGui
 		}, {
 			utility:Create("ImageLabel", {
 				Name = "Main",
